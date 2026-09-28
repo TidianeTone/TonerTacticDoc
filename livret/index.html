@@ -1,0 +1,255 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TonerTactic · Les images</title><style>
+@font-face { font-family: "Fraunces"; src: url("fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; }
+@font-face { font-family: "Lato"; src: url("fonts/lato.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Lato"; src: url("fonts/lato_bold.woff2") format("woff2"); font-weight: 700; }
+@page { size: A4; margin: 0; }
+:root {
+  --paper: #f3efe6; --ink: #1d2226; --muted: #5d676d; --line: #d6cfc0;
+  --water: #1f6f73; --water-deep: #123f45; --ember: #c8531c; --gold: #b8862b; --gold-soft: #efe0bd;
+  --night: #16191c; --night-2: #22272b; --chat: #262626; --chat-ink: #ececec;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Lato", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 210mm; height: 297mm; padding: 18mm 18mm 16mm; position: relative; overflow: hidden; page-break-after: always; display: flex; flex-direction: column; gap: 5mm; }
+.page:last-child { page-break-after: auto; }
+h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 700; margin: 0; line-height: 1.1; }
+h2 { font-size: 22pt; color: var(--water-deep); }
+h3 { font-size: 12.5pt; color: var(--water-deep); }
+p { margin: 0; }
+.kicker { font-size: 8pt; letter-spacing: .16em; text-transform: uppercase; color: var(--ember); font-weight: 700; }
+.lede { font-size: 11.5pt; color: var(--muted); max-width: 150mm; }
+.folio { position: absolute; bottom: 8mm; left: 18mm; right: 18mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--muted); border-top: .3mm solid var(--line); padding-top: 2mm; }
+img { display: block; max-width: 100%; }
+.shot { border-radius: 2mm; box-shadow: 0 1mm 3mm rgba(0,0,0,.18); }
+.cap { font-size: 8pt; color: var(--muted); margin-top: 1.2mm; }
+
+/* couverture */
+.cover { padding: 0; background: var(--night); color: #f4ead6; }
+.cover img { width: 100%; height: 190mm; object-fit: cover; object-position: 50% 50%; }
+.cover .band { padding: 12mm 18mm; display: flex; flex-direction: column; gap: 4mm; }
+.cover h1 { font-size: 46pt; letter-spacing: .06em; color: #f4ead6; }
+.cover .sub { font-family: "Fraunces", serif; font-size: 15pt; color: #e8b25a; }
+.cover .meta { font-size: 9.5pt; color: #b9b2a4; }
+
+/* chiffres */
+.figs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; }
+.fig { background: #fff; border: .3mm solid var(--line); border-radius: 2mm; padding: 3mm 3.5mm; }
+.fig b { display: block; font-family: "Fraunces", serif; font-size: 20pt; color: var(--water-deep); line-height: 1; }
+.fig span { font-size: 8pt; color: var(--muted); }
+.fig.hot b { color: var(--ember); }
+
+/* consigne de Tidiane */
+.prompt { background: #fff; border-left: 1.2mm solid var(--gold); padding: 4mm 5mm; font-size: 9.5pt; white-space: pre-wrap; border-radius: 0 2mm 2mm 0; }
+.prompt .who { font-size: 7.5pt; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); font-weight: 700; display: block; margin-bottom: 1.5mm; }
+
+/* chronologie */
+table { border-collapse: collapse; width: 100%; font-size: 8.6pt; }
+th { text-align: left; font-size: 7.5pt; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-bottom: .4mm solid var(--ink); padding: 1.5mm 2mm; }
+td { border-bottom: .25mm solid var(--line); padding: 1.8mm 2mm; vertical-align: top; }
+.chrono td { padding: 1.25mm 2mm; font-size: 8.2pt; line-height: 1.35; }
+td.h { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 700; color: var(--water-deep); }
+td.ask { width: 40%; font-style: italic; color: #3b3f42; }
+tr.night td { background: #e9e3d6; }
+.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* réponses de Claude, présentées comme dans l'appli */
+.chat { background: var(--chat); color: var(--chat-ink); border-radius: 2.5mm; padding: 4mm 5mm 4.5mm; font-size: 9pt; line-height: 1.45; box-shadow: 0 1mm 3mm rgba(0,0,0,.25); }
+.chat .top { display: flex; align-items: center; gap: 2mm; font-size: 7.5pt; color: #a8a8a8; margin-bottom: 2mm; }
+.chat .top i { width: 3.2mm; height: 3.2mm; border-radius: 50%; background: #d97757; display: inline-block; }
+.chat b { color: #fff; }
+.chat ul { margin: 1mm 0 0; padding-left: 4.5mm; }
+.chat li { margin: .4mm 0; }
+.why { font-size: 8.8pt; color: var(--ink); border-left: .8mm solid var(--ember); padding-left: 3mm; margin-top: 2mm; }
+.why b { color: var(--ember); }
+.pair { display: grid; grid-template-columns: 1fr; gap: 1.5mm; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3mm; }
+.score { display: flex; gap: 2mm; align-items: baseline; font-family: "Fraunces", serif; }
+.score b { font-size: 16pt; color: var(--ember); }
+.score span { font-size: 8.5pt; color: var(--muted); font-family: "Lato"; }
+.note { font-size: 8.5pt; color: var(--muted); }
+.box { background: #fff; border: .3mm solid var(--line); border-radius: 2mm; padding: 4mm 5mm; }
+.box ul { margin: 1mm 0 0; padding-left: 4.5mm; }
+.box li { margin: .6mm 0; }
+.bar { height: 3.2mm; border-radius: 1mm; background: var(--water); }
+.bar.h { background: var(--ember); }
+.cmp td { padding: 2.2mm 2mm; }
+.big { font-family: "Fraunces", serif; font-size: 13pt; font-weight: 700; }
+
+.dark { background: #22262a; border-radius: 2mm; padding: 3mm; }
+.dark img { margin: 0 auto; }
+.flow { display: flex; align-items: center; gap: 3mm; }
+.flow .arrow { font-family: Fraunces, serif; font-size: 20pt; color: var(--ember); }
+.bacol { display: flex; flex-direction: column; gap: 5mm; }
+.ba { display: flex; flex-direction: column; gap: 1.2mm; }
+.ba .stage { position: relative; border-radius: 2mm; overflow: hidden; background: #000; line-height: 0; cursor: ew-resize; touch-action: pan-y; }
+.ba .stage img { width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
+.ba .stage .b { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--p, 50%)) 0 0); }
+.ba .bar { position: absolute; top: 0; bottom: 0; left: var(--p, 50%); width: .6mm; margin-left: -.3mm; background: var(--gold); pointer-events: none; }
+.ba .lab { position: absolute; top: 1.5mm; font-size: 7pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: rgba(0,0,0,.72); color: #f4ead6; padding: .8mm 1.6mm; border-radius: 1mm; line-height: 1.2; }
+.ba .lab.l { left: 1.5mm; }
+.ba .lab.r { right: 1.5mm; }
+.ba input { width: 100%; accent-color: var(--gold); margin: 0; }
+.ba .pair-lab { display: none; }
+@media print {
+  .ba .stage { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm; background: none; border-radius: 0; cursor: auto; }
+  .ba .stage img { border-radius: 1.5mm; }
+  .ba .stage .b { position: static; clip-path: none; order: -1; }
+  .ba .bar, .ba input, .ba .lab { display: none; }
+  .ba .pair-lab { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm; font-size: 7pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+}
+.tag { display: inline-block; font-size: 7.5pt; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; padding: .6mm 2mm; border-radius: 1mm; background: var(--gold-soft); color: #6b4b12; }
+</style></head><body><section class="page cover"><img src="img/cartes_en_jeu.jpg" style="object-position:50% 45%">
+<div class="band"><div class="kicker" style="color:#e8b25a">Livret des images</div><h1>LES IMAGES</h1>
+<p class="sub">D'où vient chaque image de TonerTactic, et ce qu'elle est devenue dans le jeu</p>
+<p class="meta">Cadres de cartes, anneaux de mana, illustrations, modèles voxel, décors, icônes, équipement · édition du 28 septembre 2026, avec l'avant / après du premier build</p></div></section><section class="page"><div class="kicker">1 · Les cadres de cartes</div><h2>Première version : un cadre par type</h2>
+<p class="lede">Les cartes avaient d'abord quatre cadres, un par type (attaque, technique, mouvement, pouvoir). Ils ont été peints par KIE (modèle Seedream) en une seule image de 2 × 2 cadres, sur un fond vert uni.</p>
+<div class="grid2"><div class="dark"><img src="img/cadres_v1_planche.jpg"><p class="cap">La planche d'origine : quatre cadres sur vert #00FF00.</p></div>
+<div class="box"><h3>De la planche au jeu</h3><ul>
+<li><b>Détourage</b> : <i>cut_ui.py</i> transforme le vert en transparence (alpha selon la distance au vert) et « dévertit » les bords pour éviter le liseré vert.</li>
+<li><b>Découpe</b> : une case par cadre, recadrée sur ce qui n'est pas transparent.</li>
+<li><b>Mesure des fenêtres</b> : les trous intérieurs (illustration, texte) sont trouvés automatiquement et donnés en fractions ; le jeu place l'image et le texte dans ces fenêtres.</li></ul>
+<p class="note" style="margin-top:2mm">Limite : le cadre disait le type de carte, pas qui la joue. Une attaque de Garde et une attaque de Lame se ressemblaient.</p></div></div>
+<div class="dark"><img src="img/cadres_v1.jpg"><p class="cap">Les quatre cadres découpés : attaque, technique, mouvement, pouvoir.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>2</span></div></section>
+<section class="page"><div class="kicker">1 · Les cadres de cartes</div><h2>Deuxième version : un cadre par classe</h2>
+<p class="lede">Tidiane a demandé un cadre par classe, « dans le style adapté à leur classe », et pour Tidiane lui-même un peintre chaotique et ingénieux. Neuf cadres ont été peints d'un coup, en donnant la première planche comme <b>référence de mise en page</b> : même bandeau, même fenêtres, matières différentes.</p>
+<div class="grid2"><div class="dark"><img src="img/cadres_v2_planche.jpg" style="max-height:105mm"><p class="cap">La planche KIE : Garde (rempart), Lame (dagues croisées), Oracle (flammes et œil), Artificier (tuyaux et baril), Moine (bois, jade, vagues), Trappeur (bois de cerf, flèches), Tidiane (pinceaux, éclaboussures, masque), Receleur (clés et cadenas), et le cadre laiton des objets.</p></div>
+<div class="box"><h3>Le recalage automatique</h3>
+<p>Chaque cadre peint a ses proportions à lui. <i>cut_classes.py</i> trouve ses deux fenêtres, puis l'étire pour que l'illustration tombe exactement à la même place sur toutes les cartes.</p>
+<p style="margin-top:2mm">Les cadres sont posés sur une <b>toile plus grande que la carte</b> (20 % de chaque côté) : les ornements qui débordent restent visibles. Les flammes de l'Oracle lèchent le bord, les pinceaux de Tidiane dépassent en haut.</p>
+<h3 style="margin-top:3mm">Ce qui a remplacé l'ancien rôle du cadre</h3>
+<p>Le type de carte est maintenant une petite étiquette (Attaque, Technique, Pouvoir) posée sur la ligne qui sépare l'image du texte.</p></div></div>
+<div class="dark"><img src="img/cadres_classes_recales.jpg" style="max-height:62mm"><p class="cap">Les neuf cadres, recalés sur la même carte.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>3</span></div></section>
+<section class="page"><div class="kicker">1 · Les cadres de cartes</div><h2>Les 28 guildes : d'abord recollées</h2>
+<p class="lede">Une carte de guilde appartient à deux classes. Première idée, pour économiser : <b>composer</b> chaque cadre de guilde par script, le bandeau et le flanc gauche d'une classe, le flanc droit de l'autre, un fondu au milieu.</p>
+<div class="dark"><img src="img/cadres_capture_tidiane.jpg"><p class="cap">La capture envoyée par Tidiane le 26/09 : Garde, Oracle + Tidiane, Moine + Receleur, Lame + Tidiane, Artificier.</p></div>
+<div class="prompt"><span class="who">Tidiane, 26/09, 8 h 07</span>Les cartes bicolores ne sont pas correctement fondues : soit tu fais des cadres spécifiques à chaque double classe. Il est plus important que les frames soient un harmonieux mélange des 2 autres classes plutôt qu'un frame qui se base sur le nom de la guilde. Le deuxième, Oracle et Tidiane, part bien, avec les taches de peinture et le fond de flammes. Pareil pour Lame et Tidiane, mais l'arrêt est trop brutal.</div>
+<div class="box"><h3>Ce qu'il a vu</h3><p>Le fondu vertical marche quand les deux cadres ont des ornements qui débordent (flammes, coulures) : l'œil ne cherche pas la couture. Il casse quand les deux cadres sont sages : on voit une moitié bleue et une moitié rouge, collées.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>4</span></div></section>
+<section class="page"><div class="kicker">1 · Les cadres de cartes</div><h2>Puis peintes une par une</h2>
+<p class="lede">Claude a d'abord tenté la voie économique : une planche de 9 cadres, avec la planche des 9 cadres de classe en référence. Échec : le modèle a surtout recopié un des cadres de référence.</p>
+<div class="grid2"><div class="dark"><img src="img/cadres_guildes_planche_ratee.jpg" style="max-height:120mm"><p class="cap">Deuxième essai, 4 paires par planche : seule la première case (Garde + Lame) est une vraie fusion ; les trois autres recopient une classe.</p></div>
+<div class="box"><h3>Le test à une paire</h3><p>Troisième essai, sur une seule paire : <b>une image, un cadre</b>, les deux cadres de classe donnés en références séparées, et le prompt qui nomme les matières des deux (bronze violet et flammes ; cuivre, tuyaux et engrenages), les deux emblèmes à fondre en un seul, et l'interdit : « pas deux moitiés ».</p>
+<p style="margin-top:2mm">Résultat du premier coup, en qualité <i>basic</i> (7,5 crédits au lieu de 14), et en meilleure définition que dans une planche (864 × 1152 contre 576 × 768). Claude a lancé les 26 autres, quatre à la fois.</p>
+<h3 style="margin-top:3mm">Coût réel</h3><table class="t"><tr><td>2 planches ratées</td><td class="num">≈ 70 crédits</td></tr><tr><td>28 cadres à l'unité</td><td class="num">≈ 210 crédits</td></tr><tr><td>1 cadre refait (Lame + Tidiane)</td><td class="num">compris</td></tr></table></div></div>
+<div class="dark"><img src="img/cadres_fusion_oa.jpg"><p class="cap">Oracle + Artificier : les deux références (à gauche), le cadre fondu (à droite). Les flammes courent sur les tuyaux, l'œil et le baril ne font plus qu'un emblème.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>5</span></div></section>
+<section class="page"><div class="kicker">1 · Les cadres de cartes</div><h2>Les 28 cadres de guilde</h2>
+<div class="dark"><img src="img/cadres_guildes_v2.jpg"><p class="cap">Les 28 cadres après détourage et recalage sur la carte (ordre alphabétique des paires).</p></div>
+<div class="grid2"><div class="dark"><img src="img/cadres_lame_tidiane.jpg"><p class="cap">Lame + Tidiane : la première version avait perdu la peinture (à gauche). Refaite : les coulures et les lames s'entrelacent.</p></div>
+<div class="box"><h3>Du cadre peint au jeu</h3><ul>
+<li><i>cut_classes.py</i> détoure le vert, trouve les deux fenêtres (illustration, texte) et recale chaque cadre sur la carte du jeu. Les séparateurs tombent tous entre 64,5 et 65,6 % de la hauteur : les 28 cadres s'échangent sans retouche.</li>
+<li>Les sources peintes restent en local ; seules les découpes sont publiées.</li></ul></div></div>
+<div class="folio"><span>TonerTactic · les images</span><span>6</span></div></section>
+<section class="page"><div class="kicker">2 · Les anneaux de mana</div><h2>Un anneau par classe</h2>
+<p class="lede">L'orbe de mana en bas à gauche change avec le héros qui joue. Même méthode que les cadres : une planche KIE de 3 × 3 anneaux sur vert, détourée par <i>cut_ui.py</i>, avec la mesure du trou central pour y poser le chiffre.</p>
+<div class="grid2"><div class="dark"><img src="img/orbes_planche.jpg"><p class="cap">La planche d'origine.</p></div>
+<div class="box"><h3>Retouche : l'anneau de Tidiane</h3>
+<p>L'anneau de Tidiane était en porcelaine blanche. Tidiane a envoyé une empreinte digitale à l'aquarelle, violet vers rose vers orangé, en demandant le même dégradé, plus sombre.</p>
+<p style="margin-top:2mm">Pas de nouvelle génération : un script a repeint les zones de porcelaine (les pixels peu saturés) avec ce dégradé en diagonale, en gardant leur modelé. Le masque et les trois gemmes (bleu, noir, rouge) sont intacts.</p></div></div>
+<div class="dark"><img src="img/orbes.jpg"><p class="cap">Les huit anneaux découpés ; celui de Tidiane recoloré.</p></div><div class="dark"><img src="img/combat_portable.jpg" style="max-height:70mm"><p class="cap">En jeu, en mode portable : l'anneau de la Lame, le chevron du héros actif, les cadres de classe.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>7</span></div></section>
+<section class="page"><div class="kicker">3 · Les illustrations de cartes</div><h2>Du peint réaliste au low poly</h2>
+<p class="lede">Plus de 400 illustrations ont été peintes par KIE, en planches (plusieurs images par génération), puis découpées le long des gouttières noires par <i>kie_cartes/cut.py</i>.</p>
+<div class="grid2"><div><div class="dark"><img src="img/illus_planches.jpg"><p class="cap">Premier essai : planches 3 × 3 en peinture réaliste. Rejeté par Tidiane.</p></div></div><div><div class="dark"><img src="img/illus_planches_lp.jpg"><p class="cap">Version retenue : planches 4 × 4 en low poly, plus proches du voxel du jeu.</p></div></div></div>
+<div class="box"><h3>Les consignes qui ont façonné les images</h3><ul>
+<li>Celui qui joue la carte doit être visible et faire l'action : pas d'abstraction, pas de dragon sur un sort de mage.</li>
+<li>Des ennemis variés, pas que des golems.</li>
+<li>Tidiane est un duelliste masqué (masque de porcelaine, manteau magenta), partout pareil.</li>
+<li>Plus tard : « l'action prime », héros et monstres ne sont plus obligatoires.</li></ul>
+<p class="note" style="margin-top:2mm">Astuce de coût : une planche de 16 vignettes coûte une seule génération. Les 28 légendaires de guilde ont été peintes à part, en planches 2 × 2, pour plus de détail.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>8</span></div></section>
+<section class="page"><div class="kicker">4 · Personnages et monstres</div><h2>Du voxel écrit par Claude, rendu par Blender</h2>
+<p class="lede">Aucun personnage ne sort d'un générateur d'image. Chaque héros, chaque monstre et chaque structure est <b>décrit en code</b>, un code que Claude écrit, fait tourner dans Blender sans interface, regarde en rendu, puis corrige dans <i>blender/gen_chars.py</i> : des ellipsoïdes, des cylindres, des lignes et des pixels posés dans une grille de voxels de 1/40 de mètre, puis fusionnés en maillage et exportés pour Godot.</p>
+<div class="dark"><img src="img/portraits.jpg"><p class="cap">Les portraits des huit héros, rendus depuis leur modèle.</p></div>
+<div class="grid2"><div class="dark"><img src="img/modeles_crues.jpg"><p class="cap">Les boss de crue (26/09) : la Dame des Vannes, le Chevrier des ponts, sa chèvre, Brûle-Haie.</p></div>
+<div><div class="dark"><img src="img/bitte.jpg"><p class="cap">La Bitte d'amarrage, Brasse et Hale.</p></div><p class="note" style="margin-top:2mm">La Bitte d'amarrage a été nommée par un concile d'agents, dessinée par le script comme une vraie bitte de quai. Le double sens n'a été vu qu'en jeu. Tidiane l'a gardée.</p></div></div>
+
+<div class="folio"><span>TonerTactic · les images</span><span>9</span></div></section>
+<section class="page"><div class="kicker">4 · Personnages et monstres</div><h2>Les héros de guilde</h2>
+<p class="lede">Jusqu'au 26/09, un héros qui prenait une vocation gardait son corps : le script recolorait le bas de sa tenue et lui posait la coiffe de l'autre classe. Consigne du 26 : « fais des modèles Blender pour les classes hybrides, finalement ».</p>
+<div class="grid2"><div class="box"><h3>28 dessins, 56 modèles</h3><ul>
+<li>Un dessin par <b>paire</b> de classes, écrit dans <i>blender/gen_guildes.py</i> : sa silhouette, sa coiffe, son arme. La magilame des Murmures (capuche en pointe, cape runique, sabre au fil ardent), le colosse des Poings-Canons, l'escrimeur masqué de la Frame parfaite, l'agent en haut-de-forme de Chaos Agent.</li>
+<li>Chaque dessin est exporté deux fois : la couleur dominante est celle de la classe du héros, la seconde celle de sa vocation. Une Lame devenue Tidiane est rouge, une Tidiane devenue Lame est magenta.</li>
+<li>La génération des 56 fichiers prend une minute ; Claude rend ensuite des planches de 4 pour juger.</li></ul></div>
+<div class="box"><h3>Ce que le rendu a corrigé</h3><p>Premier rendu : le masque de porcelaine couvrait toute la face et donnait une tête-boîte, et l'escrimeur à chemise blanche ressemblait à un robot. Masque réduit à la plaque du visage, gilet à la couleur de la classe, jabot seul en blanc.</p><div class="dark"><img src="img/modeles_masques.jpg"><p class="cap">Après correction : Lame + Tidiane et Tidiane + Lame, Moine + Tidiane, Tidiane + Receleur.</p></div></div></div>
+<div class="folio"><span>TonerTactic · les images</span><span>10</span></div></section>
+<section class="page"><div class="kicker">4 · Personnages et monstres</div><h2>Les 28 guildes en voxel</h2>
+<div class="dark"><img src="img/modeles_guildes_1.jpg" style="max-height:225mm"><p class="cap">Guildes du Garde, de la Lame, puis de l'Oracle (une variante par guilde, planches de rendu Blender).</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>11</span></div></section>
+<section class="page"><div class="kicker">4 · Personnages et monstres</div><h2>Les 28 guildes en voxel (suite)</h2>
+<div class="dark"><img src="img/modeles_guildes_2.jpg" style="max-height:200mm"><p class="cap">Guildes de l'Oracle, de l'Artificier, du Moine, du Trappeur et Chaos Agent.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>12</span></div></section>
+<section class="page"><div class="kicker">5 · Décors et cartes d'étage</div><h2>Des biomes scriptés, des îles peintes</h2>
+<div class="grid2"><div class="box"><h3>Les arènes : Blender, par script</h3>
+<p><i>blender/gen_assets.py</i> produit murs, dalles, arches, tours, arbres et fleurs pour 12 biomes, chacun avec sa palette (automne, crypte, jade, quartz...). Godot assemble ensuite chaque arène au hasard : îlots et ponts, terrasses, cour, écluse.</p>
+<p style="margin-top:2mm">Consigne gardée : les biomes de nuit restent lisibles (lumière ambiante au moins 0,75).</p></div>
+<div class="box"><h3>Les cartes d'étage : KIE</h3>
+<p>Chaque étage a sa carte : une île voxel vue de haut, peinte par KIE à partir de la description du biome. Les salles sont ensuite <b>posées à la main</b> sur le relief (6 étapes, 3 voies, le gardien).</p></div></div>
+<div class="dark"><img src="img/etage_automne.jpg" style="max-height:70mm"><p class="cap">La carte de l'Écluse d'Automne, telle que KIE l'a peinte.</p></div><div class="dark"><img src="img/vocation.jpg" style="max-height:70mm"><p class="cap">L'écran de vocation : le modèle hybride tourne en direct dans le cadre de droite.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>13</span></div></section>
+<section class="page"><div class="kicker">6 · Les icônes</div><h2>game-icons.net, repassé en pixel art</h2>
+<p class="lede">Les mots-clés, reliques, pactes et outils ont des icônes tirées de <b>game-icons.net</b> (licence CC BY 3.0, auteurs crédités dans le jeu). Elles sont vectorielles et monochromes : <i>tools/icones.py</i> les rastérise à 38 px dans Godot, puis les habille d'un contour brun, d'un dégradé crème vers or et d'un reflet, avant de les agrandir ×3 sans lissage.</p>
+<div class="dark"><img src="img/icones.jpg"><p class="cap">Quelques icônes de mots-clés après passage en pixel art.</p></div>
+<div class="box"><h3>Pourquoi pas de génération d'image ici</h3><p>Une icône de mot-clé doit se lire à 15 pixels, à côté d'un mot. Une silhouette nette et cohérente sur 150 icônes compte plus que le détail : un jeu d'icônes existant, retravaillé d'une seule main, fait mieux que 150 générations séparées.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>14</span></div></section>
+<section class="page"><div class="kicker">7 · L'équipement</div><h2>Une image par pièce, dans le style demandé</h2>
+<p class="lede">Les 71 pièces d'équipement avaient des icônes de type (une épée pour toutes les armes de mêlée). Tidiane a envoyé ses références de style : du pixel art d'objets, contour sombre, ombrage riche, matières lisibles. Chaque pièce a maintenant son image.</p>
+<div class="grid2"><div class="dark"><img src="img/items_planche.jpg"><p class="cap">Une des cinq planches KIE (4 × 4), avec les références de Tidiane données en image.</p></div>
+<div class="box"><h3>De la planche au pixel</h3><ul>
+<li><b>Une description par pièce</b>, tirée de son nom : la Hallebarde du héron a une tête de héron, les Bottes de liège flottent.</li>
+<li><b>Les références de Tidiane</b> sont envoyées avec chaque planche : KIE copie le style, pas les objets.</li>
+<li><b>Vraie grille de pixels</b> : <i>cut_items.py</i> détoure le vert, recadre, ramène chaque objet à 64 × 64 pixels (bord net, sans flou), puis l'agrandit ×2. Une image générée « façon pixel art » n'a pas de vraie grille ; celle-ci en a une.</li></ul>
+<h3 style="margin-top:3mm">Où on les voit</h3><p>Écran d'équipement, butin, marchand, et la nouvelle section Équipement de la bibliothèque, où une pièce jamais trouvée reste une silhouette.</p></div></div>
+<div class="dark"><img src="img/items.jpg"><p class="cap">Les 71 pièces après découpe.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>15</span></div></section>
+<section class="page"><div class="kicker">8 · Le dos de carte</div><h2>Pour les cartes encore inconnues</h2>
+<div class="grid2"><div class="dark"><img src="img/dos_carte.jpg" style="max-height:160mm"><p class="cap">Le dos de carte peint par KIE, avec la planche des cadres comme référence de matière.</p></div>
+<div class="box"><h3>Où il sert</h3><p>Dans la bibliothèque, chaque carte jamais croisée montre ce dos. Seule sa rareté se devine : le liseré et la gemme en bas prennent la couleur de la rareté. Tidiane ne voulait aucun divulgâchage : ni nom, ni chiffre, ni silhouette de l'illustration.</p></div></div>
+<div class="folio"><span>TonerTactic · les images</span><span>16</span></div></section>
+<section class="page"><div class="kicker">9 · Les références de Tidiane</div><h2>Ce qu'il a montré, ce que c'est devenu</h2>
+<p class="lede">Tidiane donne ses goûts en images plus qu'en mots. Ces références ne sont jamais copiées : elles servent de direction (matière, lumière, lisibilité). Les artistes sont à créditer : Tidiane complète les noms.</p>
+<div class="grid2"><div><div class="dark"><img src="img/refs_decor.jpg"><p class="cap">Les trois images du premier message (24/09) : ruines voxel automnales, eau turquoise. Artistes : à compléter.</p></div></div>
+<div class="box"><h3>→ Les arènes</h3><p>Pas de KIE ici : les décors sont écrits dans <i>gen_assets.py</i> (pierre, lierre, arbres roux, eau turquoise) et un critique « directeur artistique AAA » a noté chaque version.</p></div></div>
+<div class="grid2"><div><div class="dark"><img src="img/refs_items.jpg"><p class="cap">Planches de pixel art d'objets envoyées le 26/09. Artistes : à compléter.</p></div></div>
+<div class="box"><h3>→ Les 71 pièces d'équipement</h3><p>Données à KIE avec chaque planche : le style (contour sombre, ombrage riche) passe, les objets non. Puis vraie grille de 64 pixels par <i>cut_items.py</i>. Les références restent en local, jamais publiées dans le dépôt.</p></div></div>
+<div class="grid2"><div><div class="dark"><img src="img/refs_anciens.jpg"><p class="cap">Illustrations envoyées pour les Anciens (26/09). Artistes : à compléter.</p></div></div>
+<div><div class="dark"><img src="img/anciens_kie.jpg"><p class="cap">Les quatre Anciens peints par KIE : couleurs et cadrage en pied repris, personnages nouveaux.</p></div></div></div>
+<div class="folio"><span>TonerTactic · les images</span><span>17</span></div></section>
+<section class="page"><div class="kicker">10 · Avant / après</div><h2>Du premier build à aujourd'hui : le combat</h2>
+<p class="lede">Le même combat (même graine, même escouade), rejoué par le premier build publié le 24 septembre et par celui du 28. Sur la page web, glissez le curseur ; ici, le premier build est à gauche.</p>
+<div class="bacol"><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_combat_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_combat_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">Vue de jeu : cartes plus longues à bulles, main plus grande, anneaux bleus et rouges par camp, chevron du héros actif.</p></div><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_action_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_action_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">Une carte visée : étiquettes de PV par camp, aide des commandes rangée derrière un bouton.</p></div><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_large_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_large_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">Vue large : le même plateau, lumière et eau réglées.</p></div></div>
+<div class="folio"><span>TonerTactic · les images</span><span>18</span></div></section>
+<section class="page"><div class="kicker">11 · Avant / après</div><h2>Du premier build à aujourd'hui : unités et choix</h2>
+<div class="bacol"><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_proche_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_proche_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">Au ras des unités : modèles et silhouettes.</p></div><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_escouade_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_escouade_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">L'escouade : huit héros en ligne, puis deux rangées de quatre dans leur encart de classe peint, avec trois cartes exemples.</p></div><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_butin_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_butin_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">Le butin : cartes en grand, bulles aux coins, plus de place pour le texte.</p></div></div>
+<div class="folio"><span>TonerTactic · les images</span><span>19</span></div></section>
+<section class="page"><div class="kicker">12 · Avant / après</div><h2>Du premier build à aujourd'hui : la route</h2>
+<div class="bacol"><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_carte_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_carte_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">La carte d'étage : du schéma de pastilles à l'île peinte, huit salles, sentier lisible, équipe visible.</p></div><div class="ba"><div class="pair-lab"><span>Premier build · 24/09</span><span>Aujourd’hui · 28/09</span></div><div class="stage"><img class="a" src="img/ba_pause_apres.jpg" alt="Aujourd’hui"><img class="b" src="img/ba_pause_avant.jpg" alt="Premier build"><span class="bar"></span><span class="lab l">Premier build · 24/09</span><span class="lab r">Aujourd’hui · 28/09</span></div><input type="range" min="0" max="100" value="50" aria-label="Avant et après"><p class="cap">La pause : menus en barres peintes, réglages visibles.</p></div></div>
+<div class="folio"><span>TonerTactic · les images</span><span>20</span></div></section>
+<section class="page"><div class="kicker">En résumé</div><h2>Qui a fait quoi</h2>
+<table class="t"><tr><th>Image</th><th>Origine</th><th>Traitement</th></tr>
+<tr><td>Cadres de cartes</td><td>KIE : 2 planches (types, classes), puis 28 cadres de guilde un par un</td><td>Détourage, mesure des fenêtres, recalage</td></tr>
+<tr><td>Anneaux de mana</td><td>KIE, 1 planche</td><td>Détourage ; Tidiane recoloré par script</td></tr>
+<tr><td>Illustrations de cartes</td><td>KIE, planches 3 × 3 puis 4 × 4 low poly</td><td>Découpe le long des gouttières</td></tr>
+<tr><td>Héros, monstres, structures, héros de guilde</td><td>Code Blender écrit par Claude (gen_chars.py, gen_guildes.py)</td><td>Voxels 1/40 m, maillage fusionné</td></tr>
+<tr><td>Décors des arènes</td><td>Code Blender (gen_assets.py)</td><td>Palettes par biome, assemblage par Godot</td></tr>
+<tr><td>Cartes d'étage, choix de menus</td><td>KIE</td><td>Salles posées à la main</td></tr>
+<tr><td>Icônes</td><td>game-icons.net (CC BY 3.0)</td><td>Pixel art crème et or (icones.py)</td></tr>
+<tr><td>Équipement</td><td>KIE, 5 planches, références de Tidiane</td><td>Vraie grille 64 px (cut_items.py)</td></tr>
+<tr><td>Dos de carte</td><td>KIE, 1 image</td><td>Redimensionné</td></tr></table>
+<div class="box"><h3>La règle générale</h3><p>Tout, ici, est orchestré par Claude, une IA : il écrit les scripts, les prompts, lance Blender, KIE et Godot, regarde les rendus et corrige. Seuls les outils changent. Le générateur d'image peint ce qui a besoin de matière et d'ambiance (cadres, illustrations, cartes, objets). Tout ce qui doit être exact, cohérent ou animé (personnages, décors, icônes) est écrit en code ou repris d'une source libre, puis retravaillé par script. Chaque image générée passe par un script de découpe : rien n'entre dans le jeu tel que KIE l'a rendu.</p></div>
+<div class="folio"><span>TonerTactic · les images</span><span>21</span></div></section><script>
+document.querySelectorAll('.ba').forEach(c => {
+  const st = c.querySelector('.stage'), r = c.querySelector('input');
+  const set = v => st.style.setProperty('--p', v + '%');
+  r.addEventListener('input', () => set(r.value));
+  let drag = false;
+  const at = e => { const b = st.getBoundingClientRect(); const v = Math.max(0, Math.min(100, (e.clientX - b.left) / b.width * 100)); r.value = v; set(v); };
+  st.addEventListener('pointerdown', e => { drag = true; st.setPointerCapture(e.pointerId); at(e); });
+  st.addEventListener('pointermove', e => { if (drag) at(e); });
+  st.addEventListener('pointerup', () => { drag = false; });
+});
+</script></body></html>
