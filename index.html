@@ -5,30 +5,41 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TonerTactic — Docs</title>
 <style>
-:root{color-scheme:dark;--bg:#120e14;--fg:#f3e9e4;--mute:#a8969c;--acc:#f0a35e;--card:#1e1720}
+:root{color-scheme:dark;--bg:#120e14;--fg:#f3e9e4;--mute:#a8969c;--acc:#f0a35e;--card:#1e1720;--live:#b98be8}
 body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.5 system-ui,sans-serif}
 main{max-width:640px;margin:0 auto;padding:40px 16px}
 h1{margin:0 0 4px;font-size:2rem}
-p{color:var(--mute);margin:0 0 28px}
+h2{margin:36px 0 4px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+p{color:var(--mute);margin:0 0 16px}
 a.doc{display:block;background:var(--card);border-left:4px solid var(--acc);border-radius:8px;padding:16px 18px;margin:0 0 12px;color:var(--fg);text-decoration:none}
+a.doc.web{border-left-color:var(--live)}
 a.doc:active,a.doc:hover{background:#2a2029}
 a.doc b{display:block;font-size:1.1rem}
 a.doc span{color:var(--mute);font-size:.9rem}
-footer a{color:var(--acc)}
+a.doc i{font-style:normal;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--live);border:1px solid var(--live);border-radius:4px;padding:1px 5px;margin-left:8px;vertical-align:2px}
+a.play{display:inline-block;background:var(--acc);color:var(--bg);font-weight:700;border-radius:8px;padding:10px 18px;text-decoration:none;margin:0 0 8px}
 </style>
 </head>
 <body><main>
 <h1>TonerTactic</h1>
-<p>Les documents du jeu.</p>
+<p>Les documents du jeu. Les pages <b style="color:var(--live)">interactives</b> se filtrent, se cliquent et se comparent au curseur.</p>
+<a class="play" href="https://tidianetone.github.io/TonerTactic/">Jouer à TonerTactic →</a>
+
+<h2>Le jeu</h2>
 <a class="doc" href="presentation.pdf"><b>Présentation du projet</b><span>16 pages · 6 Mo · de zéro à un jeu jouable en quatre jours : chiffres, comparatif avec les jeux du genre, coûts et prix</span></a>
-<a class="doc" href="carnet-de-fabrication.pdf"><b>Carnet de fabrication</b><span>32 pages · 14 Mo · la méthode pas à pas, pour la reproduire (jusqu'au 29/09 : tablette, HD web, conciles)</span></a>
 <a class="doc" href="guide-officiel.pdf"><b>Guide officiel</b><span>142 pages · 37 Mo · toutes les cartes, classes, ennemis, reliques et équipements (build du 29/09, nouvelles règles)</span></a>
-<a class="doc" href="livret/"><b>Livret des images · page web</b><span>avant / après à curseur : le premier build (24/09) contre celui du 28/09 au soir</span></a>
-<a class="doc" href="livret-des-images.pdf"><b>Livret des images</b><span>22 pages · 9 Mo · d'où vient chaque image du jeu, avant / après côte à côte</span></a>
-<a class="doc" href="concile-renote.html"><b>Concile de la renote · page interactive</b><span>25 agents renotent les 729 cartes (29/09) : constats, leviers, tableau filtrable</span></a>
-<a class="doc" href="concile-niveaux.html"><b>Concile des niveaux · page interactive</b><span>les leviers appliqués, le trajet d'un coup en schéma, 518 cartes retouchées</span></a>
-<a class="doc" href="220-cartes-concertation.pdf"><b>220 cartes : la concertation</b><span>119 pages · 4 Mo · le débat des 17 agents du 25/09</span></a>
-<a class="doc" href="concile-cartes-objets.pdf"><b>Concile des cartes-objets</b><span>4 pages · objets, Receleur, terrain (26/09)</span></a>
-<footer><p><a href="https://tidianetone.github.io/TonerTactic/">Jouer à TonerTactic →</a></p></footer>
+
+<h2>La fabrication</h2>
+<a class="doc" href="carnet-de-fabrication.pdf"><b>Carnet de fabrication</b><span>32 pages · 14 Mo · la méthode pas à pas, pour la reproduire (jusqu'au 29/09 : tablette, HD web, conciles)</span></a>
+<a class="doc web" href="livret/"><b>Livret des images<i>interactif</i></b><span>avant / après à curseur : le premier build (24/09) contre celui du 28/09 au soir</span></a>
+<a class="doc" href="livret-des-images.pdf"><b>Livret des images · PDF</b><span>22 pages · 9 Mo · d'où vient chaque image du jeu, avant / après côte à côte</span></a>
+<a class="doc web" href="illustrations-hd.html"><b>Illustrations HD<i>interactif</i></b><span>13 Mo · toutes les cartes refaites en voxel HD, par classe puis par guilde ; un clic montre l'ancienne</span></a>
+<a class="doc web" href="illustrations-essais.html"><b>Illustrations HD · les essais<i>interactif</i></b><span>9 Mo · les trois séries d'essais de style et les encarts de Tidiane et de la Lame, au curseur</span></a>
+
+<h2>Les conciles</h2>
+<a class="doc web" href="concile-renote.html"><b>Concile de la renote<i>interactif</i></b><span>29/09 · 25 agents renotent les 729 cartes : constats, leviers, tableau filtrable</span></a>
+<a class="doc web" href="concile-niveaux.html"><b>Concile des niveaux<i>interactif</i></b><span>29/09 · les leviers appliqués, le trajet d'un coup en schéma, 518 cartes retouchées</span></a>
+<a class="doc" href="concile-cartes-objets.pdf"><b>Concile des cartes-objets</b><span>26/09 · 4 pages · objets, Receleur, terrain</span></a>
+<a class="doc" href="220-cartes-concertation.pdf"><b>220 cartes : la concertation</b><span>25/09 · 119 pages · 4 Mo · le débat des 17 agents</span></a>
 </main></body>
 </html>
